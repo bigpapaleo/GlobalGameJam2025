@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"containsNaughtyWord",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"containsNaughtyWord",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
