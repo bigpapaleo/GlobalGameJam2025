@@ -1,4 +1,4 @@
-countdown_time_max = 6000;
+countdown_time_max = 3600;
 countdown_time = countdown_time_max;
 radius = 128;
 angle = -90;

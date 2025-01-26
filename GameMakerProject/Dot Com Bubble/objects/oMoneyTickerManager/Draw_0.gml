@@ -29,3 +29,11 @@ if(!global.GAME_PAUSED) {
 		}
 	}
 }
+
+if(alarm[0] > 0) {
+	draw_set_color($66ff66);
+	draw_set_font(fTimesNewRoman);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text(450, 200, corporate_congratulation);
+}

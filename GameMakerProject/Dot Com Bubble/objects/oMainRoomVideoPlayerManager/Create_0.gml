@@ -3,3 +3,5 @@ function startVideo(videoConst) {
 		video_name : videoConst
 	});
 }
+
+alarm[0] = 600 + irandom(600);

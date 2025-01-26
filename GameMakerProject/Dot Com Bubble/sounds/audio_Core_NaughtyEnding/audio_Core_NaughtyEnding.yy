@@ -12,8 +12,8 @@
   "duration":14.184,
   "name":"audio_Core_NaughtyEnding",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"videoAudioTracks",
+    "path":"folders/Sounds/videoAudioTracks.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

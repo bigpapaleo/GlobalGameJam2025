@@ -14,6 +14,23 @@ money_goal_lvl_1 = 100000; // 1000000;
 money_goal_lvl_2 = 500000; // 5000000;
 money_goal_lvl_3 = 1000000; // 10000000;
 
+corporate_congratulations = [
+  "Performance-based champion!",
+  "You're a valued employee!",
+  "We're like family!",
+  "You're in your wheelhouse!",
+  "Great R.O.I.!",
+  "Teamwork makes the dream work!",
+  "You're a subject matter expert!",
+  "Great job leveraging assets!",
+  "Great job meeting deliverables!",
+  "You're not in trouble!",
+  "Pizza party on Friday!",
+  "You could be Employee of the Month!",
+  "You might get a raise someday!"
+];
+corporate_congratulation = "";
+
 function getRateIndexOfDiscoveredWord(word) {
 	var index_of_discovered_word = -1;
 	for(var k = 0; k < array_length(related_words); k++) {
@@ -33,6 +50,11 @@ function startLevel1() {
 		array_push(helper_words, related_words[i]);
 	}
 	combineTotalAndHelperWords();
+	
+	with(oClock) {
+		countdown_time_max = 4000; // 4000;
+		countdown_time = countdown_time_max;
+	}	
 }
 
 function startLevel2() {
@@ -53,7 +75,7 @@ function startLevel2() {
 	combineTotalAndHelperWords();
 	
 	with(oClock) {
-		countdown_time_max = 12000;
+		countdown_time_max = 7000; // 12000;
 		countdown_time = countdown_time_max;
 		active = true;
 	}
@@ -63,7 +85,7 @@ function startLevel3() {
 	current_level = 3;
 	money_amt = 0;
 	
-	instance_create_layer(2733, 733, "Instances", oStickyNote, {
+	instance_create_layer(2433, 733, "Instances", oStickyNote, {
 		sticky_note_text : "Domains also have to do with \"spirtuality\" ?????"
 	});
 	for(var i = 0; i < array_length(related_words); i++) {
@@ -77,7 +99,7 @@ function startLevel3() {
 	combineTotalAndHelperWords();
 	
 	with(oClock) {
-		countdown_time_max = 18000;
+		countdown_time_max = 9000; //18000;
 		countdown_time = countdown_time_max;
 		active = true;
 	}
@@ -114,18 +136,7 @@ function clearForNextLevel() {
 	}
 	
 	discovered_words = [];
-	
-	if(current_level == 1) {
-		with(oMainRoomVideoPlayerManager) {
-			startVideo(global.video_level2);
-		}
-	} else if(current_level == 2) {
-		with(oMainRoomVideoPlayerManager) {
-			startVideo(global.video_level3);
-		}
-	} else if(current_level == 3) {
-		with(oMainRoomVideoPlayerManager) {
-			startVideo(global.video_ending_good);
-		}
-	}
+	corporate_congratulation = corporate_congratulations[irandom(array_length(corporate_congratulations)-1)];
+	alarm[0] = 120;
+	audio_play_sound(sndLevelWin, 0, false);
 }

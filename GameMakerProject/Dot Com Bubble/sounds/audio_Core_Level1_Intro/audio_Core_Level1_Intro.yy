@@ -12,8 +12,8 @@
   "duration":19.416,
   "name":"audio_Core_Level1_Intro",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"videoAudioTracks",
+    "path":"folders/Sounds/videoAudioTracks.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

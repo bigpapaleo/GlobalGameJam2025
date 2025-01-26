@@ -3,10 +3,21 @@ enum TYPING_STATE {
 	TYPING,
 	SUCCESS,
 	FAILURE,
-	WAIT_FOR_HR
+	WAIT_FOR_HR,
+	FADE_IN,
+	FADE_OUT,
+	ORIENTATION_VIDEO
 }
 
-state = TYPING_STATE.IDLE;
+enum NEXT_STATE {
+	NONE,
+	START_ORIENTATION_VIDEO,
+	START_LEVEL_1,
+	BACK_TO_MAIN_MENU
+}
+
+state = TYPING_STATE.FADE_IN;
+next_state = NEXT_STATE.NONE;
 domain_name_string = "http://www.";
 submitted_domains = [];
 max_string_length = 37;
@@ -67,6 +78,16 @@ function submitUrl() {
 		scroll_speed : 3+random(4)
 	});
 	
+	var rand_success_sound = irandom(7);
+	if(rand_success_sound == 0) audio_play_sound(sndSuccess1, 0, false);
+	if(rand_success_sound == 1) audio_play_sound(sndSuccess2, 0, false);
+	if(rand_success_sound == 2) audio_play_sound(sndSuccess3, 0, false);
+	if(rand_success_sound == 3) audio_play_sound(sndSuccess4, 0, false);
+	if(rand_success_sound == 4) audio_play_sound(sndSuccess5, 0, false);
+	if(rand_success_sound == 5) audio_play_sound(sndSuccess6, 0, false);
+	if(rand_success_sound == 6) audio_play_sound(sndSuccess7, 0, false);
+	if(rand_success_sound == 7) audio_play_sound(sndSuccess8, 0, false);
+	
 	alarm[1] = 30;
 }
 
@@ -78,9 +99,20 @@ function rejectUrl(reject_reason) {
 		url_value : reject_reason,
 		flair_color : $0000ff
 	});
+	
+	audio_play_sound(sndFail, 0, false);
 }
 
 function changeHands() {
+	var typing_sound = irandom(6);
+	if(typing_sound == 0) audio_play_sound(sndType1, 0, false);
+	if(typing_sound == 1) audio_play_sound(sndType2, 0, false);
+	if(typing_sound == 2) audio_play_sound(sndType3, 0, false);
+	if(typing_sound == 3) audio_play_sound(sndType4, 0, false);
+	if(typing_sound == 4) audio_play_sound(sndType5, 0, false);
+	if(typing_sound == 5) audio_play_sound(sndType6, 0, false);
+	if(typing_sound == 6) audio_play_sound(sndType7, 0, false);	
+	
 	var change_chance = random(1);
 	if(change_chance < 0.75) {
 		with(oHand) {

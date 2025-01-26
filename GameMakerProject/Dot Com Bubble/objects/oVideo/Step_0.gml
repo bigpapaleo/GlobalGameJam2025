@@ -21,5 +21,5 @@ if(keyboard_check_pressed(ord("F"))) {
 }
 */
 
-video_set_volume(100);
+// video_set_volume(100);
 manuallySyncAudio();

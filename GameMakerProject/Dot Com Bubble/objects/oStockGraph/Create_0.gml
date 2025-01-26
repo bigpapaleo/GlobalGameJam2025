@@ -12,6 +12,9 @@ function addPositionToGraph() {
 	if(money_ticker.current_level == 3) money_goal = money_ticker.money_goal_lvl_3;
 	
 	var y_position = y_height_max * (money_ticker.money_amt / money_goal);
+	if(y_position > 0) {
+		y_position += random(5); // Random noise
+	}
 	array_push(y_positions, y_position);
 	if(array_length(y_positions) > stock_graph_array_length_max) {
 		array_delete(y_positions, 0, 1);

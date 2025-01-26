@@ -98,8 +98,12 @@ crt_apply = function() {
 	gpu_set_tex_repeat_ext(sampler_id, true);
 	gpu_set_tex_filter_ext(sampler_id, false);
 
-	
-	draw_surface_stretched(monitor_surface, 1160, 270, 580, 425);
+	var typing_manager = instance_find(oTypingManager, 0);
+	var menu_manager = instance_find(oMenuManager, 0);
+	if((typing_manager == noone || typing_manager.state != TYPING_STATE.ORIENTATION_VIDEO) &&
+	    !global.ON_MAIN_MENU || menu_manager.show_credits) {
+		draw_surface_stretched(monitor_surface, 1160, 270, 580, 425);
+	}
 	shader_reset();
 	/*
 	if do_overlay and overlay_over_screen {

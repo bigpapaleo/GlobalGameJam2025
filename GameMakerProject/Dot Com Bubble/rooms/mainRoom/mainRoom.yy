@@ -12,6 +12,7 @@
     {"name":"inst_3A7A93A0","path":"rooms/mainRoom/mainRoom.yy",},
     {"name":"inst_3C304538","path":"rooms/mainRoom/mainRoom.yy",},
     {"name":"inst_58FCDFE6","path":"rooms/mainRoom/mainRoom.yy",},
+    {"name":"inst_713E9A68","path":"rooms/mainRoom/mainRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -31,6 +32,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"crt","path":"objects/crt/crt.yy",},"propertyId":{"name":"mask_strength","path":"objects/crt/crt.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.8",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"crt","path":"objects/crt/crt.yy",},"propertyId":{"name":"mask_scale","path":"objects/crt/crt.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":128.0,},
+        {"$GMRInstance":"v1","%Name":"inst_713E9A68","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_713E9A68","objectId":{"name":"oFadeManager","path":"objects/oFadeManager/oFadeManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":160.0,},
       ],"layers":[],"name":"CRT","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Hands","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Hands","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

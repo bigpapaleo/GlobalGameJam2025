@@ -15,4 +15,12 @@ if(!global.GAME_PAUSED && active) {
 		}
 		active = false;
 	}
+	
+	if(!audio_is_playing(sndStopwatch)) {
+		audio_play_sound(sndStopwatch, 0, true);
+	}
+}
+
+if(global.GAME_PAUSED || !active) {
+	audio_stop_sound(sndStopwatch);
 }

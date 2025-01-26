@@ -5,7 +5,7 @@ function containsNaughtyWord(text_to_examine) {
 	 "vagina", "dick", "sex", "anus", "shit", "cocksucker",
 	 "xxx", "nude", "topless", "boob", "titty", "titties",
 	 "nipple", "taint", "analsex", "oralsex", "yiff", "rimjob",
-	 "blowjob", "handjob", "poop", "turd"
+	 "blowjob", "handjob", "poop", "turd", "porn", "slut"
 	];
 	
 	for(var i = 0; i < array_length(naughty_word_list); i++) {

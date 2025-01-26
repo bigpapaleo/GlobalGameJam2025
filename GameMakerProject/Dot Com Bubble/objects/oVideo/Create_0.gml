@@ -1,5 +1,6 @@
 video = video_open(video_name);
 video_enable_loop(false);
+video_set_volume(0);
 
 current_video_name = video_name;
 next_video_name = "";
@@ -93,7 +94,7 @@ function loadAudioTrack(video_name) {
 	
 	current_track = noone;
 	if(video_name == global.video_level1 && !audio_is_playing(audio_Core_Level1_Intro)) {
-		current_track = audio_play_sound(audio_Core_Level1_Intro, 0, false);		
+		current_track = audio_play_sound(audio_Core_Level1_Intro, 0, false);
 	} else if(video_name == global.video_level2 && !audio_is_playing(audio_Core_Level2_Intro)) {
 		current_track = audio_play_sound(audio_Core_Level2_Intro, 0, false);		
 	} else if(video_name == global.video_level3 && !audio_is_playing(audio_Core_Level3_Intro)) {
@@ -104,12 +105,50 @@ function loadAudioTrack(video_name) {
 		current_track = audio_play_sound(audio_Core_GoodEnding2, 0, false);		
 	} else if(video_name == global.video_ending_naughty && !audio_is_playing(audio_Core_NaughtyEnding)) {
 		current_track = audio_play_sound(audio_Core_NaughtyEnding, 0, false);		
-	}
+	} else if(video_name == global.video_orientation && !audio_is_playing(audio_Orientation)) {
+		current_track = audio_play_sound(audio_Orientation, 0, false);		
+	} else if(video_name == global.video_wastetime_brandon1 && !audio_is_playing(audio_WasteTime_Brandon1)) {
+		current_track = audio_play_sound(audio_WasteTime_Brandon1, 0, false);		
+	} else if(video_name == global.video_wastetime_brandon2 && !audio_is_playing(audio_WasteTime_Brandon2)) {
+		current_track = audio_play_sound(audio_WasteTime_Brandon2, 0, false);		
+	} else if(video_name == global.video_wastetime_brandon3 && !audio_is_playing(audio_WasteTime_Brandon3)) {
+		current_track = audio_play_sound(audio_WasteTime_Brandon3, 0, false);		
+	} else if(video_name == global.video_wastetime_brandon4 && !audio_is_playing(audio_WasteTime_Brandon4)) {
+		current_track = audio_play_sound(audio_WasteTime_Brandon4, 0, false);		
+	} else if(video_name == global.video_wastetime_brandon5 && !audio_is_playing(audio_WasteTime_Brandon5)) {
+		current_track = audio_play_sound(audio_WasteTime_Brandon5, 0, false);		
+	} else if(video_name == global.video_wastetime_brandon6 && !audio_is_playing(audio_WasteTime_Brandon6)) {
+		current_track = audio_play_sound(audio_WasteTime_Brandon6, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn1 && !audio_is_playing(audio_WasteTime_Shawn1)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn1, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn2 && !audio_is_playing(audio_WasteTime_Shawn2)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn2, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn3 && !audio_is_playing(audio_WasteTime_Shawn3)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn3, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn4 && !audio_is_playing(audio_WasteTime_Shawn4)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn4, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn5 && !audio_is_playing(audio_WasteTime_Shawn5)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn5, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn6 && !audio_is_playing(audio_WasteTime_Shawn6)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn6, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn7 && !audio_is_playing(audio_WasteTime_Shawn7)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn7, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn8 && !audio_is_playing(audio_WasteTime_Shawn8)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn8, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn9 && !audio_is_playing(audio_WasteTime_Shawn9)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn9, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn10 && !audio_is_playing(audio_WasteTime_Shawn10)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn10, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn11 && !audio_is_playing(audio_WasteTime_Shawn11)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn11, 0, false);		
+	} else if(video_name == global.video_wastetime_shawn12 && !audio_is_playing(audio_WasteTime_Shawn12)) {
+		current_track = audio_play_sound(audio_WasteTime_Shawn12, 0, false);		
+	} 
 }
 
 function exitFromVideoEnd() {
 	video_close();
-	audio_stop_all();
+	if(current_track != noone) audio_stop_sound(current_track);
 	instance_destroy();
 	/*
 	if(should_go_to_main_menu_at_end) {

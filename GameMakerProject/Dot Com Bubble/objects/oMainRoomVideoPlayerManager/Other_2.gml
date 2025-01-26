@@ -1,3 +1,5 @@
+global.video_orientation = "videos/Orientation.mp4";
+
 global.video_level1 = "videos/Core_Level1_Intro.mp4";
 global.video_level2 = "videos/Core_Level2_Intro.mp4";
 global.video_level3 = "videos/Core_Level3_Intro.mp4"
