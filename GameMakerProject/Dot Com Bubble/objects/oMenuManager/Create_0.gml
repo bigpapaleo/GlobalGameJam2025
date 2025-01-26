@@ -1,6 +1,6 @@
 menu_position = -1;
 show_credits = false;
-version = "v0.2";
+version = "v0.3";
 
 title_angle_sin_wave = 0;
 

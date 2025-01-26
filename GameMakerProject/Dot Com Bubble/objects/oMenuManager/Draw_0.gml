@@ -8,16 +8,17 @@ if(global.ON_MAIN_MENU) {
 			draw_set_halign(fa_left);
 			draw_set_valign(fa_middle);
 		
-			draw_text_color_outline_short(900, 100, "DotComBubble.com");
-			draw_text_color_outline_short(900, 225, "Programmer - Elliott Ridgway");
-			draw_text_color_outline_short(900, 330, "Videographer - Daniel Jackson");
-			draw_text_color_outline_short(900, 435, "Writer - Shaun Lamb");
-			draw_text_color_outline_short(900, 540, "3D Modeling - Aaron Campbell");
+			draw_sprite_ext(sTitleScreen, 0, 1315, 100, 2.0, 2.0, 0.0, c_white, 1.0);
+			
+			draw_text_color_outline_short(850, 225, "Programmer - Elliott Ridgway");
+			draw_text_color_outline_short(850, 330, "Videographer - Daniel Jackson");
+			draw_text_color_outline_short(850, 435, "Writers - Shaun Lamb, Aaron Campbell");
+			draw_text_color_outline_short(850, 540, "3D Modeling - Aaron Campbell");
 		
-			draw_text_color_outline_short(900, 700, "Also starring");
-			draw_text_color_outline_short(900, 805, "Brandon Reed");
-			draw_text_color_outline_short(900, 880, "Shawn Cassie");
-			draw_text_color_outline_short(900, 955, "Isabella Ridgway");
+			draw_text_color_outline_short(850, 700, "Also starring");
+			draw_text_color_outline_short(850, 805, "Brandon Reed");
+			draw_text_color_outline_short(850, 880, "Shawn Cassie");
+			draw_text_color_outline_short(850, 955, "Isabella Ridgway");
 		} else {
 			draw_set_font(fDOS_Medium);
 			draw_set_color(c_aqua);

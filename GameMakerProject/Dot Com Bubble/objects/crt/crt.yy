@@ -20,7 +20,7 @@
     "path":"folders/Extensions/SittingDuck's CRT Shader/Presets/Base Preset (do not delete).yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

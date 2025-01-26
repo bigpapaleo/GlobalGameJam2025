@@ -9,8 +9,10 @@ if(global.ON_MAIN_MENU) {
 				menu_position++;
 				audio_play_sound(sndType1, 0, false);
 			} else if(keyboard_check_pressed(vk_enter)) {
-				if(menu_position == 0) startOrientationVideo();
-				else if(menu_position == 1) {
+				if(menu_position == 0) {
+					audio_play_sound(sndSuccess8, 0, false);
+					startOrientationVideo();
+				} else if(menu_position == 1) {
 					audio_play_sound(sndSuccess8, 0, false);
 					show_credits = true;
 				}

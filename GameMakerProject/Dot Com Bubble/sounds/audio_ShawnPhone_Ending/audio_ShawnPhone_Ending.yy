@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sndStopwatch",
+  "%Name":"audio_ShawnPhone_Ending",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":3.2,
-  "name":"sndStopwatch",
+  "duration":14.64,
+  "name":"audio_ShawnPhone_Ending",
   "parent":{
-    "name":"soundFx",
-    "path":"folders/Sounds/soundFx.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndStopwatch.wav",
+  "soundFile":"audio_ShawnPhone_Ending.mp3",
   "type":0,
-  "volume":0.81,
+  "volume":1.0,
 }

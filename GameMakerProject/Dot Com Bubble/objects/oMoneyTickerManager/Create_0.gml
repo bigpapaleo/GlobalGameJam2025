@@ -85,7 +85,7 @@ function startLevel3() {
 	current_level = 3;
 	money_amt = 0;
 	
-	instance_create_layer(2433, 733, "Instances", oStickyNote, {
+	instance_create_layer(2500, 733, "Instances", oStickyNote, {
 		sticky_note_text : "Domains also have to do with \"spirtuality\" ?????"
 	});
 	for(var i = 0; i < array_length(related_words); i++) {
@@ -131,6 +131,9 @@ function clearForNextLevel() {
 	with(oStockGraph) {
 		instance_destroy();
 	}
+	with(oVideo) {
+		exitFromVideoEnd();
+	}
 	with(oHand) {
 		put_away = true;
 	}
@@ -139,4 +142,26 @@ function clearForNextLevel() {
 	corporate_congratulation = corporate_congratulations[irandom(array_length(corporate_congratulations)-1)];
 	alarm[0] = 120;
 	audio_play_sound(sndLevelWin, 0, false);
+}
+
+function goToEndScreen() {
+	layer_set_visible(layer_get_id("Assets_1"), false);
+	layer_set_visible(layer_get_id("Background"), false);
+	layer_set_visible(layer_get_id("Backgrounds_1"), false);
+	layer_set_visible(layer_get_id("Backgrounds_2"), false);
+	layer_set_visible(layer_get_id("Backgrounds_3"), false);
+	layer_set_visible(layer_get_id("Hands"), false);
+	
+	instance_create_layer(0, 0, "Instances", oEndingManager);
+	
+	with(oClock) {
+		instance_destroy();
+	}
+	with(oStickyNote) {
+		instance_destroy();
+	}
+	
+	with(oTypingManager) {
+		state = TYPING_STATE.END_CUTSCENE;
+	}
 }

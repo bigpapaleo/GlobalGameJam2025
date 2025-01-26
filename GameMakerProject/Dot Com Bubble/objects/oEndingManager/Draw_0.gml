@@ -1,0 +1,1 @@
+draw_sprite(sEndScreenBackground, 0, 800, 0);
